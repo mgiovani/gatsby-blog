@@ -58,16 +58,16 @@ const Post = ({
             </Link>
           </>
         ) : (
-          <>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-            <Navigation
-              previousPath={previousPath}
-              previousLabel={previousLabel}
-              nextPath={nextPath}
-              nextLabel={nextLabel}
-            />
-          </>
-        )}
+            <>
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+              <Navigation
+                previousPath={previousPath}
+                previousLabel={previousLabel}
+                nextPath={nextPath}
+                nextLabel={nextLabel}
+              />
+            </>
+          )}
       </div>
     </div>
   );
