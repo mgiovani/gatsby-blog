@@ -19,7 +19,7 @@ module.exports = {
     defaultTheme: "dark",
     postsPerPage: 10,
     showMenuItems: 3,
-    menuMoreText: "Show more",
+    menuMoreText: "Mostrar mais",
     mainMenu: [
       {
         title: "",
@@ -35,6 +35,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: "gatsby-source-strapi",
+      options: {
+        apiURL: "http://localhost:1337",
+        contentTypes: ["article", "user"],
+        queryLimit: 1000,
       },
     },
     {

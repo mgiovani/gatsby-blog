@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/artigos",
-      "handler": "Artigo.find",
+      "path": "/articles",
+      "handler": "Article.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/artigos/count",
-      "handler": "Artigo.count",
+      "path": "/articles/count",
+      "handler": "Article.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/artigos/:id",
-      "handler": "Artigo.findOne",
+      "path": "/articles/:id",
+      "handler": "Article.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/artigos",
-      "handler": "Artigo.create",
+      "path": "/articles",
+      "handler": "Article.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/artigos/:id",
-      "handler": "Artigo.update",
+      "path": "/articles/:id",
+      "handler": "Article.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/artigos/:id",
-      "handler": "Artigo.delete",
+      "path": "/articles/:id",
+      "handler": "Article.delete",
       "config": {
         "policies": []
       }

@@ -1,9 +1,9 @@
 {
   "connection": "default",
-  "collectionName": "artigos",
+  "collectionName": "articles",
   "info": {
-    "name": "artigo",
-    "description": "Artigo do blog"
+    "name": "article",
+    "description": "Artigo de blog"
   },
   "options": {
     "increments": true,
@@ -11,23 +11,22 @@
     "comment": ""
   },
   "attributes": {
-    "título": {
-      "type": "string",
-      "minLength": 10,
+    "title": {
+      "unique": true,
       "required": true,
-      "unique": true
+      "type": "string"
     },
-    "conteúdo": {
-      "type": "text"
-    },
-    "capa": {
+    "cover": {
       "model": "file",
       "via": "related",
       "plugin": "upload"
     },
-    "autor": {
+    "content": {
+      "type": "text"
+    },
+    "author": {
       "model": "user",
-      "via": "artigos",
+      "via": "articles",
       "plugin": "users-permissions"
     }
   }

@@ -56,9 +56,9 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "artigos": {
-      "collection": "artigo",
-      "via": "autor"
+    "articles": {
+      "collection": "article",
+      "via": "author"
     }
   }
 }

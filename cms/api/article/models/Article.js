@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Artigo` model.
+ * Lifecycle callbacks for the `Article` model.
  */
 
 module.exports = {
