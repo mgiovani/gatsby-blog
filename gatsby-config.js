@@ -21,10 +21,10 @@ module.exports = {
     showMenuItems: 3,
     menuMoreText: "Show more",
     mainMenu: [
-      //{
-      //  title: "Sobre",
-      //  path: "/about",
-      //},
+      {
+        title: "",
+        path: "",
+      },
     ],
   },
   plugins: [
