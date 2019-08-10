@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "artigos",
+  "info": {
+    "name": "artigo",
+    "description": "Artigo do blog"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "título": {
+      "type": "string",
+      "minLength": 10,
+      "required": true,
+      "unique": true
+    },
+    "conteúdo": {
+      "type": "text"
+    },
+    "capa": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "autor": {
+      "model": "user",
+      "via": "artigos",
+      "plugin": "users-permissions"
+    }
+  }
+}
