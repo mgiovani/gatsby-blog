@@ -11,67 +11,33 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
     allMarkdownRemark: { edges: posts },
   } = data;
 
-  //   return (
-  //     <>
-  //       <SEO />
-  //       <Layout>
-  //         {posts.map(({ node }) => {
-  //           const {
-  //             id,
-  //             excerpt: autoExcerpt,
-  //             frontmatter: {
-  //               title,
-  //               date,
-  //               path,
-  //               author,
-  //               coverImage,
-  //               excerpt,
-  //               tags,
-  //             },
-  //           } = node;
-
-  //           return (
-  //             <Post
-  //               key={id}
-  //               title={title}
-  //               date={date}
-  //               path={path}
-  //               author={author}
-  //               coverImage={coverImage}
-  //               tags={tags}
-  //               excerpt={excerpt || autoExcerpt}
-  //             />
-  //           );
-  //         })}
-
-  //         <Navigation
-  //           previousPath={previousPagePath}
-  //           previousLabel="Posts mais novos"
-  //           nextPath={nextPagePath}
-  //           nextLabel="Posts mais antigos"
-  //         />
-  //       </Layout>
-  //     </>
-  //   );
-  // };
   return (
     <>
       <SEO />
       <Layout>
-        {artigos.map(({ node }) => {
+        {posts.map(({ node }) => {
           const {
             id,
             excerpt: autoExcerpt,
-            frontmatter: { titulo, autor, capa, excerpt, tags },
+            frontmatter: {
+              title,
+              date,
+              path,
+              author,
+              coverImage,
+              excerpt,
+              tags,
+            },
           } = node;
 
           return (
-            <Artigo
+            <Post
               key={id}
-              title={titulo}
-              date={created_at}
-              author={autor}
-              coverImage={capa}
+              title={title}
+              date={date}
+              path={path}
+              author={author}
+              coverImage={coverImage}
               tags={tags}
               excerpt={excerpt || autoExcerpt}
             />
@@ -124,28 +90,6 @@ export const postsQuery = graphql`
               }
             }
           }
-        }
-      }
-    }
-  }
-`;
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allStrapiArticle {
-      edges {
-        node {
-          id
-          titulo
-          capa {
-            childImageSharp {
-              fluid(maxWidth: 800) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          created_at(formatString: "DD/MM/YYYY HH:MM")
-          conteudo
         }
       }
     }
