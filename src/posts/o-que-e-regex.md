@@ -4,15 +4,15 @@ path: "/o-que-e-regex"
 date: "2019-08-11"
 author: "Giovani"
 coverImage: "../images/o-que-e-regex-cover.png"
-excerpt: "Uma pequena introdução ao que é uma RegEx e onde usar."
+excerpt: "Uma pequena introdução ao que é uma RegEx e como usá-la."
 tags: ["regex", "tutorial"]
 ---
 
 ## Introdução
 
-Uma RegEx (**reg**ular **ex**pression) nada mais é que a definição de um padrão a ser buscado em um texto ou string qualquer e com isso podem ser usadas para extração ou validação de dados, entre outras coisas.
+Uma RegEx (**reg**ular **ex**pression) nada mais é que a definição de um padrão a ser buscado em um texto ou string qualquer. Com isso tais padrões podem ser usados para extração ou validação de dados, entre outras coisas.
 
-Apesar da definição ser simples as expressões regulares tem fama de serem complexas e difíceis de se se usar e a verdade é que é uma ferramenta bem simples de se aprender, mas difícil de se dominar.
+Apesar da definição ser simples, as expressões regulares têm fama de serem complexas e difíceis de se se usar e a verdade é que é uma ferramenta bem simples de se aprender, mas difícil de se dominar.
 
 Existe uma clara diferença entre buscar por um dígito:
 ```regex
@@ -35,7 +35,7 @@ Este texto será apenas sobre a sintaxe básica das expressões regulares e a pa
 
 ## Como utilizar
 
-As regexes estão presentes em muitas ferramentas de edição de texto ou afins (e.g. o Vim, VS Code e Notepad++) mas se preferir testar os padrões no próprio navegador eu recomendo o site [Regex101](https://regex101.com). O site apresenta um campo para informar a sua expressão regular e outro para informar qual será o 'texto alvo' da sua regex, além disso, ainda possui do lado direito: explicação de como a busca foi feita, quais padrões foram encontrados e uma colinha para suas regexes.
+As regexes estão presentes em muitas ferramentas de edição de texto ou afins (e.g. o Vim, VS Code e Notepad++), mas se preferir testar os padrões no próprio navegador eu recomendo o site [Regex101](https://regex101.com). O site apresenta um campo para informar a sua expressão regular e outro para informar qual será o 'texto alvo' da sua regex, além disso, ainda possui do lado direito: explicação de como a busca foi feita, quais padrões foram encontrados e uma colinha para suas regexes.
 
 O uso básico das expressões está ligado a saber os operadores lógicos, operadores quantitativos e classes de busca disponíveis. Tá, mas o que é cada um desses?
 
