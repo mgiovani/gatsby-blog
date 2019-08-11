@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 import Navigation from "./navigation";
 import { toKebabCase } from "../helpers";
+import { DiscussionEmbed } from "disqus-react"
 
 import style from "../styles/post.module.css";
 
@@ -23,6 +24,10 @@ const Post = ({
   const previousLabel = previousPost && previousPost.frontmatter.title;
   const nextPath = nextPost && nextPost.frontmatter.path;
   const nextLabel = nextPost && nextPost.frontmatter.title;
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: title },
+  }
 
   return (
     <div className={style.post}>
@@ -66,6 +71,7 @@ const Post = ({
                 nextPath={nextPath}
                 nextLabel={nextLabel}
               />
+              <DiscussionEmbed {...disqusConfig} />
             </>
           )}
       </div>

@@ -8,15 +8,15 @@ const postCSSMixins = require("postcss-mixins");
 module.exports = {
   siteMetadata: {
     title: `mgiovani - Blog`,
-    description: `Um resumo de algumas coisas que aprendi na vida.`,
-    copyrights: "Giovani Moutinho",
+    description: `Um resumo de algumas coisas que aprendi na vida. - Giovani Moutinho`,
+    copyrights: `© 2019 Giovani Moutinho`,
     author: `@mgiovani`,
     logo: {
       src: "",
-      alt: "",
+      alt: "mgiovani",
     },
     logoText: "mgiovani",
-    defaultTheme: "dark",
+    defaultTheme: "light",
     postsPerPage: 10,
     showMenuItems: 3,
     menuMoreText: "Mostrar mais",
@@ -117,3 +117,6 @@ module.exports = {
     },
   ],
 };
+require("dotenv").config({
+  path: `.env`,
+})
