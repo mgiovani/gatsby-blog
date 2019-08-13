@@ -12,7 +12,7 @@ tags: ["regex", "tutorial"]
 
 Uma RegEx (**reg**ular **ex**pression) nada mais é que a definição de um padrão a ser buscado em um texto ou string qualquer. Com isso tais padrões podem ser usados para extração ou validação de dados, entre outras coisas.
 
-Apesar da definição ser simples, as expressões regulares têm fama de serem complexas e difíceis de se se usar e a verdade é que é uma ferramenta bem simples de se aprender, mas difícil de se dominar.
+Apesar da definição ser simples, as expressões regulares têm fama de serem complexas e difíceis de se usar e a verdade é que é uma ferramenta bem simples de se aprender, mas difícil de se dominar.
 
 Existe uma clara diferença entre buscar por um dígito:
 ```regex
