@@ -7,7 +7,8 @@ const postCSSMixins = require("postcss-mixins");
 
 module.exports = {
   siteMetadata: {
-    title: `mgiovani - Blog`,
+    pathPrefix: `/blog`,
+    title: `mgiovani`,
     description: `Um resumo de algumas coisas que aprendi na vida. - Giovani Moutinho`,
     copyrights: `© 2019 Giovani Moutinho`,
     author: `@mgiovani`,
@@ -15,7 +16,7 @@ module.exports = {
       src: "",
       alt: "mgiovani",
     },
-    logoText: "mgiovani",
+    logoText: "mgiovani - Blog",
     defaultTheme: "light",
     postsPerPage: 10,
     showMenuItems: 3,
@@ -76,6 +77,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-reading-time`,
           {
             resolve: "gatsby-remark-embed-video",
             options: {
@@ -119,4 +121,4 @@ module.exports = {
 };
 require("dotenv").config({
   path: `.env`,
-})
+});

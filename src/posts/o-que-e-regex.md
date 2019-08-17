@@ -1,6 +1,6 @@
 ---
 title: "O que é RegEx?"
-path: "/o-que-e-regex"
+path: "/blog/o-que-e-regex"
 date: "2019-08-11"
 author: "Giovani"
 coverImage: "../images/o-que-e-regex-cover.png"

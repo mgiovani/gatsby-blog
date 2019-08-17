@@ -51,6 +51,9 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
+# VS Code
+.vs
+
 # dotenv environment variables file
 .env
 

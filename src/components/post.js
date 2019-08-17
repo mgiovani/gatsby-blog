@@ -15,6 +15,7 @@ const Post = ({
   coverImage,
   author,
   excerpt,
+  readingTime,
   tags,
   html,
   previousPost,
@@ -37,10 +38,15 @@ const Post = ({
         </h1>
         <div className={style.meta}>
           {date} {author && <>— Escrito por {author}</>}
+          <span className={style.floatRight}>
+            <small>
+              📖 Leitura de {readingTime} minutos
+          </small>
+          </span>
           {tags ? (
             <div className={style.tags}>
               {tags.map(tag => (
-                <Link to={`/tag/${toKebabCase(tag)}/`} key={toKebabCase(tag)}>
+                <Link to={`blog/tag/${toKebabCase(tag)}/`} key={toKebabCase(tag)}>
                   <span className={style.tag}>#{tag}</span>
                 </Link>
               ))}
@@ -86,6 +92,7 @@ Post.propTypes = {
   coverImage: PropTypes.object,
   author: PropTypes.string,
   excerpt: PropTypes.string,
+  readingTime: PropTypes.object,
   html: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   previousPost: PropTypes.object,

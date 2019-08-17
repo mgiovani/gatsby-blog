@@ -9,6 +9,7 @@ import Post from "../components/post";
 const BlogPostTemplate = ({ data, pageContext }) => {
   const {
     frontmatter: { title, date, path, author, coverImage, excerpt, tags },
+    fields: { readingTime },
     excerpt: autoExcerpt,
     id,
     html,
@@ -24,6 +25,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         date={date}
         path={path}
         author={author}
+        readingTime={readingTime.minutes}
         coverImage={coverImage}
         html={html}
         tags={tags}
@@ -47,6 +49,11 @@ BlogPostTemplate.propTypes = {
 export const pageQuery = graphql`
   query($path: String) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
+      fields {
+        readingTime {
+          minutes
+        }
+      }
       frontmatter {
         title
         date(formatString: "DD/MM/YYYY")

@@ -21,7 +21,7 @@ const Tags = ({
       <SEO />
       <Layout>
         <div className="infoBanner">
-          Posts with tag: <span>#{tag}</span>
+          Posts com a tag: <span>#{tag}</span>
         </div>
 
         {posts.map(({ node }) => {
@@ -55,9 +55,9 @@ const Tags = ({
 
         <Navigation
           previousPath={previousPagePath}
-          previousLabel="Newer posts"
+          previousLabel="Posts mais novos"
           nextPath={nextPagePath}
-          nextLabel="Older posts"
+          nextLabel="Posts mais antigos"
         />
       </Layout>
     </>
@@ -93,7 +93,7 @@ export const postsQuery = graphql`
             tags
             coverImage {
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxWidth: 1080) {
                   ...GatsbyImageSharpFluid
                 }
               }

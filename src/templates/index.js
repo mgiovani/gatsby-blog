@@ -13,7 +13,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
 
   return (
     <>
-      <SEO />
+      <SEO title="Blog" />
       <Layout>
         {posts.map(({ node }) => {
           const {
@@ -28,6 +28,9 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               excerpt,
               tags,
             },
+            fields: {
+              readingTime: { minutes }
+            }
           } = node;
 
           return (
@@ -37,6 +40,7 @@ const Index = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
               date={date}
               path={path}
               author={author}
+              readingTime={minutes}
               coverImage={coverImage}
               tags={tags}
               excerpt={excerpt || autoExcerpt}
@@ -75,6 +79,11 @@ export const postsQuery = graphql`
         node {
           id
           excerpt
+          fields {
+            readingTime {
+              minutes
+            }
+          }
           frontmatter {
             title
             date(formatString: "DD/MM/YYYY")
