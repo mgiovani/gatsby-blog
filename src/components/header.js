@@ -47,17 +47,17 @@ const Header = props => {
       </Helmet>
       <header className={style.header}>
         <div className={style.inner}>
-          <Link to="/">
+          <Link to="/blog">
             <div className={style.logo}>
               {siteLogo.src ? (
                 <img src={siteLogo.src} alt={siteLogo.alt} />
               ) : (
-                <>
-                  <span className={style.mark}>></span>
-                  <span className={style.text}>{logoText}</span>
-                  <span className={style.cursor} />
-                </>
-              )}
+                  <>
+                    <span className={style.mark}>></span>
+                    <span className={style.text}>{logoText}</span>
+                    <span className={style.cursor} />
+                  </>
+                )}
             </div>
           </Link>
           <span className={style.right}>

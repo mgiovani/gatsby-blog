@@ -37,7 +37,7 @@ const Post = ({
           {excerpt ? <Link to={path}>{title}</Link> : title}
         </h1>
         <div className={style.meta}>
-          {date} {author && <>— Escrito por {author}</>}
+          📆 {date} {author && <>— Escrito por {author}</>}
           <span className={style.floatRight}>
             <small>
               📖 Leitura de {readingTime} minutos
