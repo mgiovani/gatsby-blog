@@ -1,15 +1,17 @@
 import React from "react";
 
-import st from "../styles/style.css";
+// import st from "../styles/style.css";
 import Layout from "../components/layout"
 import { Link } from "gatsby";
 import SEO from "../components/seo";
-
+const iframeStyle = {
+  position: 'fixed', top: '0', left: '0', bottom: '0', right: '0', width: '100%', height: '100%', border: 'none', margin: '0', padding: '0', overflow: 'hidden',
+}
 const Home = () => {
   return (
     <div>
       <SEO title="Home" />
-      <iframe src="https://mgiovani.github.io"></iframe>
+      <iframe src="https://mgiovani.github.io" style={iframeStyle}></iframe>
       {/*{} 
       <nav className={[st.navbar, st.navbarExpandLg, st.fixedTop, st.customNav, st.sticky].join(' ')}>
         <div className="container">
