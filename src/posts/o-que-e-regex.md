@@ -15,15 +15,19 @@ Uma RegEx (**reg**ular **ex**pression) nada mais é que a definição de um padr
 Apesar da definição ser simples, as expressões regulares têm fama de serem complexas e difíceis de se usar e a verdade é que é uma ferramenta bem simples de se aprender, mas difícil de se dominar.
 
 Existe uma clara diferença entre buscar por um dígito:
+
 ```regex
 \d
 ```
+
 Ou buscar por um número de telefone em um dos padrões nacionais mais comuns:
+
 ```regex
 ^(\+[1-9]{2})?((?<!0)(\(?[1-9]{2}\)?)?|0[1-9]{2})(?:\s*)\d{4,5}-?\d{4}$
 ```
 
-Tudo bem que a regex acima possa ter se tornado um pouco complicada, mas ela seria capaz de encontrar qualquer um dos seguintes números em um texto: 
+Tudo bem que a regex acima possa ter se tornado um pouco complicada, mas ela seria capaz de encontrar qualquer um dos seguintes números em um texto:
+
 - +5538994898261
 - 038994898261
 - (38)994898261
@@ -41,17 +45,17 @@ O uso básico das expressões está ligado a saber os operadores lógicos, opera
 
 ### Classes
 
-As classes seriam como uma lista de opções para que o conteúdo case com a regex de busca. As classes são declaradas com o uso de colchetes. Por exemplo, `[A-Z]` busca por uma letra no intervalo de A a Z na [tabela unicode de caracteres](https://unicode-table.com/pt/). 
+As classes seriam como uma lista de opções para que o conteúdo case com a regex de busca. As classes são declaradas com o uso de colchetes. Por exemplo, `[A-Z]` busca por uma letra no intervalo de A a Z na [tabela unicode de caracteres](https://unicode-table.com/pt/).
 
 Com base na tabela percebemos que apenas letras maiúsculas são capturadas. Para encontrar maiúsculas ou minúsculas seria necessário descrever `[A-Za-z]`.
 
 Alguns exemplos:
 
-| Símbolo   | Significado                                     | Examplo de regex | Exemplo de captura                               |
-|:---------:|:-----------------------------------------------:|:----------------:|:------------------------------------------------:|
-| `[]`      | Encontra um dos caracteres dentro dos colchetes | `[ABCD]`         | Uma das primeiras 4 letras do alfabeto maiúsculo |
-| `-`       | Indicador de intervalo da classe                | `[a-z]`          | Qualquer uma das letras do alfabeto minúsculo    |
-| `^`       | Operador de negação                             | `[^a]`           | Qualquer coisa que não seja um a                 |
+| Símbolo |                   Significado                   | Exemplo de regex |                Exemplo de captura                |
+| :-----: | :---------------------------------------------: | :--------------: | :----------------------------------------------: |
+|  `[]`   | Encontra um dos caracteres dentro dos colchetes |     `[ABCD]`     | Uma das primeiras 4 letras do alfabeto maiúsculo |
+|   `-`   |        Indicador de intervalo da classe         |     `[a-z]`      |  Qualquer uma das letras do alfabeto minúsculo   |
+|   `^`   |               Operador de negação               |      `[^a]`      |         Qualquer coisa que não seja um a         |
 
 ### Quantificadores
 
@@ -61,12 +65,12 @@ Se for acrescentado um `{2}` na frente de uma classe, você estará buscando por
 
 Alguns exemplos:
 
-| Símbolo | Significado              | Examplo de regex | Exemplo de captura      |
-|:-------:|:------------------------:|:----------------:|:-----------------------:|
-| `+`     | Uma ou mais ocorrências  | `[ABCD]+`        | ABCD                    |
-| `*`     | Zero ou mais ocorrências | `A*`             | AAAAAA                  |
-| `{2,5}` | De 2 a 5 ocorrências     | `[abcd]{2,5}`    | abcd                    |
-| `?`     | Zero ou uma ocorrência   | `A?`             | Pode conter ou não um A |
+| Símbolo |       Significado        | Exemplo de regex |   Exemplo de captura    |
+| :-----: | :----------------------: | :--------------: | :---------------------: |
+|   `+`   | Uma ou mais ocorrências  |    `[ABCD]+`     |          ABCD           |
+|   `*`   | Zero ou mais ocorrências |       `A*`       |         AAAAAA          |
+| `{2,5}` |   De 2 a 5 ocorrências   |  `[abcd]{2,5}`   |          abcd           |
+|   `?`   |  Zero ou uma ocorrência  |       `A?`       | Pode conter ou não um A |
 
 ### Operadores lógicos
 
@@ -80,15 +84,14 @@ Como algumas classes são frequentemente utilizadas, existem algumas abreviaçõ
 
 Alguns exemplos:
 
-| Símbolo |                           Significado                          | Examplo de uso |         Exemplo de captura        |
-|:-------:|:--------------------------------------------------------------:|:--------------:|:---------------------------------:|
-|   `\d`  |                         Mesmo que [0-9]                        |      `\d+`     |               12345               |
-|   `\w`  |                     Mesmo que [A-Za-z0-9_]                     |      `\w*`     |             AaaaA123_             |
-|   `\s`  | Casa com espaços em branco (espaço, tab, quebra de linha, etc) |  `[abcd]{2,5}` |                abcd               |
+| Símbolo |                          Significado                           | Exemplo de uso |        Exemplo de captura         |
+| :-----: | :------------------------------------------------------------: | :------------: | :-------------------------------: |
+|  `\d`   |                        Mesmo que [0-9]                         |     `\d+`      |               12345               |
+|  `\w`   |                     Mesmo que [A-Za-z0-9_]                     |     `\w*`      |            AaaaA123\_             |
+|  `\s`   | Casa com espaços em branco (espaço, tab, quebra de linha, etc) | `[abcd]{2,5}`  |               abcd                |
 |   `^`   |                        Início de string                        |      `^A`      | Casa com um A no início da string |
-|   `$`   |                          Fim de string                         |      `A$`      |   Casa com um A no fim da string  |
-|   `.`   |        Qualquer caractere **exceto** uma quebra de linha       |      `.+`      |            ABC0123#$%_            |
-
+|   `$`   |                         Fim de string                          |      `A$`      |  Casa com um A no fim da string   |
+|   `.`   |       Qualquer caractere **exceto** uma quebra de linha        |      `.+`      |           ABC0123#\$%\_           |
 
 ## Encerramento:
 
