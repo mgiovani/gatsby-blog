@@ -88,7 +88,7 @@ Alguns exemplos:
 | :-----: | :------------------------------------------------------------: | :------------: | :-------------------------------: |
 |  `\d`   |                        Mesmo que [0-9]                         |     `\d+`      |               12345               |
 |  `\w`   |                     Mesmo que [A-Za-z0-9_]                     |     `\w*`      |            AaaaA123\_             |
-|  `\s`   | Casa com espaços em branco (espaço, tab, quebra de linha, etc) | `[abcd]{2,5}`  |               abcd                |
+|  `\s`   | Casa com espaços em branco (espaço, tab, quebra de linha, etc) | `ab\s+cd`      |             ab   cd               |
 |   `^`   |                        Início de string                        |      `^A`      | Casa com um A no início da string |
 |   `$`   |                         Fim de string                          |      `A$`      |  Casa com um A no fim da string   |
 |   `.`   |       Qualquer caractere **exceto** uma quebra de linha        |      `.+`      |           ABC0123#\$%\_           |
