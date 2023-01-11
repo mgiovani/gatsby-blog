@@ -34,7 +34,7 @@
     "gatsby-remark-prismjs": "^3.2.0",
     "gatsby-remark-reading-time": "^1.0.1",
     "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-source-strapi": "0.0.9",
+    "gatsby-source-strapi": "3.0.4",
     "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.8",
     "prismjs": "^1.15.0",
